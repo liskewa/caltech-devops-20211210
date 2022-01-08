@@ -1,3 +1,10 @@
+/*
+Pulled from Github Docker:
+    https://github.com/docker-library/hello-world/blob/master/hello.c
+To compile:
+    cc -static -o hello hello.c
+*/
+
 #include <sys/syscall.h>
 #include <unistd.h>
 
