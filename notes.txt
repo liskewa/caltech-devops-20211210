@@ -8,3 +8,11 @@ keyring password: devops
 # Git project with useful files and notes:
 
 URL: git@github.com:liskewa/caltech-devops-liskewa.git
+
+
+
+
+# List installed packages
+
+sudo apt list --installed
+sudo apt list python3
