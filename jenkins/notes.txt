@@ -1,0 +1,33 @@
+# Install Java:
+
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk 
+java -version
+
+
+
+
+# Install Jenkins:
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add 
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list' 
+sudo apt-get update
+sudo apt-get install jenkins 
+sudo service jenkins status
+
+
+
+
+# Start Jenkins:
+
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+
+
+
+# Run Jenkins console:
+
+# Start web browser (keyring password: devops)
+# goto URL: localhost:8080 
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
