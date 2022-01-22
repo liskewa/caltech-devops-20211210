@@ -7,4 +7,4 @@ keyring password: devops
 
 # Git project with useful files and notes:
 
-URL: 
+URL: git@github.com:liskewa/caltech-devops-liskewa.git
