@@ -35,6 +35,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
 
-# Verify Maven installation:
+# Maven Jenkins sample Git repository:
 
 mvn --version
+URL: git@github.com:liskewa/simple-java-maven-app.git
