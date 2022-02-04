@@ -29,6 +29,9 @@ password: kegmai0A@tvrui (may be reset)
 kubeadm join 172.31.28.152:6443 --token jw6vdo.civbjue6f4cyzxbr \
     --discovery-token-ca-cert-hash sha256:8f546ea3654a00232867758e164209b34aba207f2abd52ad3471e0125b145142 
 
+# Create a Kubernetes network
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d '\n')"
+
 
 
 
