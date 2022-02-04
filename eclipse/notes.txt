@@ -1,0 +1,2 @@
+# Test NG package:
+wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
