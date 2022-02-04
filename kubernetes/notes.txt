@@ -23,9 +23,19 @@ sudo kubectl get nodes
 launch a terminal only node in lab workspace
 look in /etc/ssh/sshd_config for port
 ssh <userid>@<hostid> -p <port>
+password: kegmai0A@tvrui (may be reset)
 
 # Join a work node
 kubeadm join 172.31.28.152:6443 --token jw6vdo.civbjue6f4cyzxbr \
     --discovery-token-ca-cert-hash sha256:8f546ea3654a00232867758e164209b34aba207f2abd52ad3471e0125b145142 
 
-kegmai0A@tvrui
+
+
+
+# Rancher for Kubernetes:
+on controller node:
+    curl -sfL https://get.k3s.io | sh -
+    sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+on worker node:
+    curl -sfL https://get.k3s.io | K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetoken sh -
+   
