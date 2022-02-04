@@ -31,6 +31,7 @@ sudo systemctl status jenkins
 # Start web browser (keyring password: devops)
 # goto URL: localhost:8080 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+or try admin / admin
 
 
 
