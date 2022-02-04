@@ -18,3 +18,8 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 sudo kubectl get nodes
+
+# Join a work node
+kubeadm join 172.31.28.152:6443 --token jw6vdo.civbjue6f4cyzxbr \
+    --discovery-token-ca-cert-hash sha256:8f546ea3654a00232867758e164209b34aba207f2abd52ad3471e0125b145142 
+
