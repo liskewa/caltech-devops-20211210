@@ -1,3 +1,8 @@
-# Test NG package:
+# Selenium test driver
+sudo apt-get update
+sudo pip install selenium
+
+
+# Test NG package
 wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
 unzip testng-6.8.7.jar.zip
