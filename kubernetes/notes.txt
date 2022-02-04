@@ -7,3 +7,14 @@ exit
 # Install Kubernetes
 sudo apt-get update
 sudo apt install docker.io kubectl=1.20.5-00 kubeadm=1.20.5-00 kubelet=1.20.5-00
+
+# Start docker
+sudo service docker start
+
+# Setup Kubernetes cluster
+sudo apt-get update
+sudo kubeadm init
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+sudo kubectl get nodes
