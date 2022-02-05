@@ -27,6 +27,7 @@ ssh warrenliskegmai@34.229.88.79 -p 42006
 password: kegmai0A@tvrui (expires after 24 hours)
 
 # Join a work node
+sudo kubeadm token create --print-join-command
 kubeadm join 172.31.28.152:6443 --token jw6vdo.civbjue6f4cyzxbr \
     --discovery-token-ca-cert-hash sha256:8f546ea3654a00232867758e164209b34aba207f2abd52ad3471e0125b145142 
 
