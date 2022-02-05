@@ -44,6 +44,7 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl versio
 
 # Rancher for Kubernetes:
 on controller node:
+    k3s-agent-uninstall.sh && curl -sfL https://get.k3s.io | sh -
     curl -sfL https://get.k3s.io | sh -
     sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 on worker node:
