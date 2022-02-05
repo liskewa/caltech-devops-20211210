@@ -23,7 +23,8 @@ sudo kubectl get nodes
 launch a terminal only node in lab workspace
 look in /etc/ssh/sshd_config for port
 ssh <userid>@<hostid> -p <port>
-password: kegmai0A@tvrui (may be reset)
+ssh warrenliskegmai@34.229.88.79
+password: kegmai0A@tvrui (expires after 24 hours)
 
 # Join a work node
 kubeadm join 172.31.28.152:6443 --token jw6vdo.civbjue6f4cyzxbr \
