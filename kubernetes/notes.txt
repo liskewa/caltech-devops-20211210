@@ -50,3 +50,8 @@ on controller node:
 on worker node:
     curl -sfL https://get.k3s.io | K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetoken sh -
    
+
+
+
+# Usefull information:
+http://wiki.ciscolinux.co.uk/index.php?title=Kubernetes/Deployment,_ReplicaSet_and_Pod
