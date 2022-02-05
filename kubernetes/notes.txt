@@ -55,3 +55,4 @@ on worker node:
 
 # Usefull information:
 http://wiki.ciscolinux.co.uk/index.php?title=Kubernetes/Deployment,_ReplicaSet_and_Pod
+https://www.terraform.io/language/resources/provisioners/remote-exec
