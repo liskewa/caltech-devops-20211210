@@ -16,3 +16,9 @@ URL: git@github.com:liskewa/caltech-devops-liskewa.git
 
 sudo apt list --installed
 sudo apt list python3
+
+
+
+
+from Sharique Kamal to All Participants:
+this will give you the public ip --> curl http://169.254.169.254/latest/meta-data/public-ipv4/
