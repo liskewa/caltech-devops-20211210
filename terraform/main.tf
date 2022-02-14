@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket"
+  bucket = "caltechng-devops-warrenliske-terraform-project"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "My Terraform Project 1"
     Environment = "Dev"
   }
 }
