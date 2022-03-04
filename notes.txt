@@ -22,3 +22,9 @@ sudo apt list python3
 
 from Sharique Kamal to All Participants:
 this will give you the public ip --> curl http://169.254.169.254/latest/meta-data/public-ipv4/
+
+
+
+
+Shared Google document created by instructor:
+https://docs.google.com/document/d/1uTDAW5_EknQYXD2v2rLwU8d1MJyviwlh73yP3CvhXMc/edit
