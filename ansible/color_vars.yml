@@ -1,0 +1,19 @@
+---
+people:
+- name: Mike
+  fav_colour: Blue
+- name: Kyle
+  fav_colour: Yellow
+- name: Ann
+  fav_colour: Blue
+colours:
+  - name: Blue
+    things:
+      - Sky
+      - Sea
+  - name: Yellow
+    things:
+       - Egg yolk
+       - Taxi
+
+

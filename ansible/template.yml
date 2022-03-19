@@ -1,0 +1,10 @@
+---
+- name: template test
+  hosts: all
+  tasks:
+          - name: learning module 
+            template:
+                    src: myhost.j2
+                    dest: /tmp/welcome.txt
+
+

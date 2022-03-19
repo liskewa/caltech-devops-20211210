@@ -1,0 +1,19 @@
+---
+- name: Testing ping module
+  hosts: all
+  become: true
+  tasks:
+          - name: installing apache2
+            apt:
+              name: apache2
+              state: latest
+          - name: copy the jinja file to hosts 
+            template:
+               src: myindex.j2
+               dest: /var/www/html/index.html
+          - name: restarting apache2 service
+            service:
+                name: apache2
+                state: restarted
+
+

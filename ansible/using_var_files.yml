@@ -1,0 +1,14 @@
+---
+- name: Using vars files
+  hosts: production
+  vars_files:
+    - [ "{{ ansible_facts['os_family'] }}.yml", "os_defaults.yml" ]
+
+  tasks:
+  - name: Make sure apache is started
+#    debug:
+#      msg: "apache = {{ apache }}"
+    ansible.builtin.service:
+      name: '{{ apache }}'
+      state: started
+

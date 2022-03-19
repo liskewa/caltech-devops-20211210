@@ -1,0 +1,20 @@
+---
+- name: Get system information
+  hosts: all
+  become: true
+  tasks:
+    - name: hostname
+      debug:
+        msg: "{{ ansible_hostname }}"
+    - name: os_family
+      debug:
+        msg: "{{ ansible_os_family }}"
+    - name: address
+      debug:
+        msg: "{{ ansible_default_ipv4.address }}"
+    - name: memory
+#      debug:
+#        msg: "{{ ansible_memory_mb }}"
+      debug:
+        msg: "{{ ansible_memory_mb.real.total }}"
+

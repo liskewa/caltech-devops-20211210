@@ -1,0 +1,24 @@
+---
+- name: Test play
+  hosts: all
+  tasks:
+
+  - name: copy 
+    copy:
+      src: mycmtclass.txt
+      dest: /tmp/mycmtclass.txt
+
+  - name: Register a variable
+    ansible.builtin.shell: cat /tmp/mycmtclass.txt
+    register: motd_contents
+
+  - name: Use the variable in conditional statement
+    debug:
+      msg: "motd contents SimpliLearn"
+    when: motd_contents.stdout.find('SimpliLearn') != -1
+
+  - name: Use the variable in conditional statement
+    debug:
+      msg: "motd does not contains the word SimpliLearn"
+    when: motd_contents.stdout.find('SimpliLearn') == -1
+

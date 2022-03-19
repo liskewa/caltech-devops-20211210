@@ -1,0 +1,10 @@
+---
+- name: Play with variable from host file
+  hosts: all
+  become: true
+  tasks:
+    - name: installing "{{ pkg }}"
+      apt:
+        name: "{{ pkg }}"
+        state: latest
+

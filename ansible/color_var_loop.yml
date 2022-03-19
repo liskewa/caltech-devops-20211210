@@ -1,0 +1,13 @@
+---
+- name: learning ansible loop
+  hosts: localhost
+  connection: local
+  vars_files:
+    - color_vars.yml
+  gather_facts: no
+  tasks:
+   - name: Create the Jinja2 based template
+     template: 
+       src: ./color_var_summary.j2
+       dest: ./output.txt
+

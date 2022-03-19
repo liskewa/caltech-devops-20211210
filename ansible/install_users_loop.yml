@@ -1,0 +1,15 @@
+---
+- name: User Account Management
+  hosts: all
+  become: true
+  tasks:
+    - name: Add simplilearn User Group
+      group:
+        name: simplilearn
+    - name: Adding Users ...
+      user:
+        name: "{{ item }}"
+        state: present
+      loop:
+        "{{ myusers }}"
+

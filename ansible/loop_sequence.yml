@@ -1,0 +1,10 @@
+---
+- name: User Account Management
+  hosts: all
+  become: true
+  tasks:
+    - name: with_sequence
+      ansible.builtin.debug:
+        msg: "{{ item }}"
+      with_sequence: start=1 end=5 stride=1 format=testuser%02x
+

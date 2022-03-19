@@ -1,0 +1,17 @@
+[development]
+localhost
+18.232.140.227  ansible_user=ec2-user
+
+[development:vars]
+username=myusr20
+
+
+
+
+[production]
+172.31.21.17
+172.31.31.196
+
+[production:vars]
+username=myusr2
+

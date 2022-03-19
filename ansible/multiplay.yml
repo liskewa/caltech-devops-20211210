@@ -1,0 +1,14 @@
+---
+- name:  first play test
+  hosts: all
+  tasks:
+  - name: learning playbooks
+    debug:
+                    msg: "Hey look i am from first play"
+- name: second play test
+  hosts: localhost
+  tasks:
+  - name: learning playbooks II
+    debug:
+                    msg: "Hey look i a m from second play"
+

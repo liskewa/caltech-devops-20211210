@@ -1,0 +1,18 @@
+---
+Colour number 1 is Blue.
+Debug: colour_count = 1
+Debug: colour_count = 1
+Currently 0 people call Blue
+their favourite.
+And the following are examples of things that are Blue:
+- Sky
+- Sea
+
+Colour number 2 is Yellow.
+Debug: colour_count = 1
+Currently 0 people call Yellow
+their favourite.
+And the following are examples of things that are Yellow:
+- Egg yolk
+- Taxi
+

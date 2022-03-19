@@ -1,0 +1,12 @@
+---
+- name: Add users
+  hosts: all
+  become: true
+  tasks:
+    - name: Add user "{{ username }}"
+      ansible.builtin.user:
+        name: "{{ username }}"
+        group: simplilearn
+        password: "{{ 'devops' | password_hash('sha512') }}"
+        state: present
+

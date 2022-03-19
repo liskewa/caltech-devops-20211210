@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+echo ""
+echo ""
+echo "Ansible information:"
+ansible --version
+
+
+echo ""
+echo ""
+echo "Installing apache2:"
+ansible all -m ansible.builtin.apt -a "name=apache2 state=present"
+
+
+echo ""
+echo ""
+echo "Copy template to hosts:"
+echo "TBD"
+

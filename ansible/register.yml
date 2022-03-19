@@ -1,0 +1,15 @@
+---
+- name: User Account Management
+  hosts: all
+  become: true
+  tasks:
+    - name: Register loop output as a variable
+      ansible.builtin.shell: "echo {{ item }}"
+      loop:
+        - "one"
+        - "two"
+      register: myresult
+    - name: print register value
+      debug:
+        var: myresult
+  

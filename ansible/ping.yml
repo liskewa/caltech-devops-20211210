@@ -1,0 +1,7 @@
+---
+- name: Ping each node to see if they are alive
+  hosts: all
+  tasks:
+    - name: Ping all the hosts
+      ping:
+

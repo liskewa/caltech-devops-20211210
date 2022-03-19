@@ -1,0 +1,5 @@
+usr1: myuser2
+mystate: present
+pkg: apache2
+myvar1: w2
+

@@ -1,0 +1,5 @@
+usr1: myuser1
+mystate: present
+pkg: telnet
+myvar1: c1
+

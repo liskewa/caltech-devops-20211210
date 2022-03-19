@@ -1,0 +1,20 @@
+---
+- name: Testing ping module
+  hosts: production
+  become: true
+  tasks:
+   - name: installing apache2
+     apt:
+       name: apache2
+       state: latest
+   - name: adding index.html
+     copy:
+       src: myindex.html
+       dest: /var/www/html/index.html
+     notify: restarting apache2 service
+  handlers:
+   - name: restarting apache2 service
+     service:
+       name: apache2
+       state: restarted
+

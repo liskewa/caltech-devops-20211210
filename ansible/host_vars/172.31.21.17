@@ -1,0 +1,5 @@
+usr1: myuser3
+mystate: absent
+pkg: sshd
+myvar1: w2
+

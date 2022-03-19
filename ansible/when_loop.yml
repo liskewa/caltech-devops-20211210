@@ -1,0 +1,18 @@
+---
+- name: User Account Management
+  hosts: all
+  become: true
+  vars:
+    mypackages:
+      - telnet
+      - apache2
+      - tree
+  tasks:
+    - name: Adding the package
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        "{{ mypackages }}"
+      when: ansible_facts['os_family'] == "Debian"
+

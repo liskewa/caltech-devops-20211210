@@ -1,0 +1,11 @@
+[development]
+localhost pkg=apache2
+
+[production]
+172.31.21.17 pkg=telnet
+172.31.31.196 pkg=docker
+
+[allgroups:children]
+development
+production
+

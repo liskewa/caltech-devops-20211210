@@ -1,0 +1,32 @@
+---
+- name: Add users
+  hosts: all
+  become: true
+  vars:
+    account1: user1
+    account2: user2
+    account3: user3
+  tasks:
+    - name: Add group "simplilearn"
+      ansible.builtin.group:
+        name: simplilearn
+        state: present
+    - name: Add user "{{ account1 }}"
+      ansible.builtin.user:
+        name: "{{ account1 }}"
+        group: simplilearn
+        password: "{{ 'pass1' | password_hash('sha512') }}"
+        state: present
+    - name: Add user "{{ account2 }}"
+      ansible.builtin.user:
+        name: "{{ account2 }}"
+        group: simplilearn
+        password: "{{ 'pass2' | password_hash('sha512') }}"
+        state: present
+    - name: Add user "{{ account3 }}"
+      ansible.builtin.user:
+        name: "{{ account3 }}"
+        group: simplilearn
+        password: "{{ 'pass3' | password_hash('sha512') }}"
+        state: present
+

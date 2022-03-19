@@ -1,0 +1,10 @@
+---
+- name: User Account Management
+  hosts: all
+  become: true
+  tasks:
+  - name: printing the details
+    debug: 
+      msg: This is an Ubuntu node"
+    when: ansible_distribution == "Ubuntu"
+

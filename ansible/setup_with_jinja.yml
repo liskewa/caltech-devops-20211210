@@ -1,0 +1,11 @@
+---
+- name: Get system information
+  hosts: all
+  become: true
+  tasks:
+
+    - name: info
+      debug:
+        msg: accessfacts.j2
+
+

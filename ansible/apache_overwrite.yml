@@ -1,0 +1,27 @@
+---
+- name: Play with Apache
+  hosts: all
+  become: true
+  tasks:
+    - name: installing apache2
+      apt:
+        name: apache2
+        state: latest
+    - name: installing telnet
+      apt:
+        name: telnet
+        state: latest
+    - name: adding index.html
+      copy:
+        src: /home/labsuser/ansible/myindex.html
+        dest: /var/www/html/index.html
+    - name: adding date to index
+      ansible.builtin.replace:
+        path: /var/www/html/index.html
+        regexp: "{CURRENT_DATE}"
+        replace: "{{ currentdate }}"
+    - name: restarting apache2 service
+      service:
+        name: apache2
+        state: restarted
+

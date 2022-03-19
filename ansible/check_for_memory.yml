@@ -1,0 +1,17 @@
+---
+- name: Get system information
+  hosts: all
+  become: true
+  tasks:
+
+  - name: copy 
+    copy:
+      src: mycmtclass.txt
+      dest: /tmp/mycmtclass.txt
+
+
+  - name: Check for sufficient memory
+    debug:
+      msg: "Memory is greater than 5GB"
+    when: ansible_memory_mb.real.total >= 5120
+

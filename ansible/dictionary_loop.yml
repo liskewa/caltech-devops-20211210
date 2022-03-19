@@ -1,0 +1,14 @@
+---
+- name: User Account Management
+  hosts: all
+  become: true
+  vars:
+    tag_data:
+      Environment: dev
+      Application: payment
+  tasks:
+    - name: Using dict2items
+      ansible.builtin.debug:
+        msg: "{{ item.key }} - {{ item.value }}"
+      loop: "{{ tag_data | dict2items }}"
+

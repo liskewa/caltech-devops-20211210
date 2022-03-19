@@ -1,0 +1,35 @@
+---
+- name: Testing ping module
+  hosts: all
+  become: true
+  tasks:
+
+  - name: installing apache2
+    apt:
+      name: apache2
+      state: latest
+    when:  ansible_facts['os_family'] == "Debian"
+ 
+  - name: installing httpd
+    yum:
+      name: httpd
+      state: latest
+    when:  ansible_facts['os_family'] == "RedHat"
+
+  - name: adding index.html
+    copy:
+      src: myindex.html
+      dest: /var/www/html/index.html
+
+  - name: restarting apache2 service
+    service:
+      name: apache2
+      state: restarted
+    when:  ansible_facts['os_family'] == "Debian"
+
+  - name: restarting httpd service
+    service:
+      name: httpd
+      state: restarted
+    when:  ansible_facts['os_family'] == "RedHat"
+

@@ -1,0 +1,11 @@
+---
+- name: learning precendence
+  hosts: all
+  become: true
+  vars:
+         myvar1: playscopevar
+  tasks:
+   - name: myvariable is
+     debug:
+             msg: current varaible is "{{ myvar1 }}"
+
