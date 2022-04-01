@@ -1,0 +1,17 @@
+---
+- name: Testing ping module
+  hosts: all
+  become: true
+  tasks:
+
+  pre_tasks:
+    - debug:
+        msg: "testing pretasks for ROLES"
+
+  roles:
+    - web-install
+
+  post_tasks:
+    - debug:
+        msg: "testing posttasks for ROLES"
+

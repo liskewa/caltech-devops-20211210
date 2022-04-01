@@ -1,0 +1,8 @@
+---
+# handlers file for web-install
+
+- name: restart httpd
+  service:
+    name: apache2
+    state: restarted
+

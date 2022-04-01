@@ -1,0 +1,6 @@
+---
+# vars file for prod
+
+deb_package: apache2
+rpm_package: httpd
+

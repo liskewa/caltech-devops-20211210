@@ -1,0 +1,16 @@
+---
+- name: testing roles 
+  hosts: all
+  become: true
+
+  pre_tasks:
+    - debug:
+        msg: "testing pretasks for ROLES"
+
+  roles:
+    - prod
+
+  post_tasks:
+    - debug:
+        msg: "testing posttasks for ROLES"
+

@@ -1,0 +1,21 @@
+---
+# tasks file for prod
+
+- name: install apache2
+  apt:
+    name: apache2
+    state: latest
+
+- name: start service
+  service:
+    name: apache2
+    state: started
+    enabled: true
+
+- name: copy template
+  template:
+    src: myindex.j2
+    dest: /var/www/html/index.html
+  notify:
+    - restart httpd
+
