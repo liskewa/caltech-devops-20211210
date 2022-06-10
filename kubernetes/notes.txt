@@ -6,7 +6,8 @@ exit
 
 # Install Kubernetes
 sudo apt-get update
-sudo apt install docker.io kubectl=1.20.5-00 kubeadm=1.20.5-00 kubelet=1.20.5-00
+# sudo apt install docker.io kubectl=1.20.5-00 kubeadm=1.20.5-00 kubelet=1.20.5-00
+sudo apt-get install --allow-downgrades -qy kubelet=1.23.6-00 kubectl=1.23.6-00 kubeadm=1.23.6-00
 
 # Start docker
 sudo service docker start
