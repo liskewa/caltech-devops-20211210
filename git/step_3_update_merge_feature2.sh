@@ -26,8 +26,18 @@ git checkout Integration
 git merge Feature2
 git branch -d Feature2
 
-echo ""
-echo "Showing project"
-git status
-git log
+echo "============================================================"
+echo "Showing project files"
 ls -lR
+
+echo "============================================================"
+echo "Showing project status"
+git status
+
+echo "============================================================"
+echo "Showing project branches"
+git branch -a
+
+echo "============================================================"
+echo "Showing project log"
+git log
