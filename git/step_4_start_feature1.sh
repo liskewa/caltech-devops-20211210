@@ -1,5 +1,5 @@
 echo "Updating Feature1 branch"
-git checkout Feature2
+git checkout Feature1
 mkdir fruit
 
 echo ""
