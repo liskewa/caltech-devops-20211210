@@ -18,6 +18,9 @@ echo "============================================================"
 echo "Showing project log"
 git log
 
+
+
+
 echo ""
 echo ""
 echo ""
