@@ -21,6 +21,12 @@ git add vegetables/potato.dat
 git commit -m "Added potato"
 
 echo ""
+echo "Merging to Integration"
+git checkout Integration
+git merge Feature2
+git branch -d Feature2
+
+echo ""
 echo "Showing project"
 git status
 git log
