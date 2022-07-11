@@ -1,4 +1,4 @@
-echo "Updating Feature2 branch
+echo "Updating Feature2 branch"
 git checkout Feature2
 mkdir vegetables
 
