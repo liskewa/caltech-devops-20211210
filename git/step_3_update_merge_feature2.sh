@@ -20,6 +20,7 @@ echo "Potatoes are starchy tubers" > vegetables/potato.dat
 git add vegetables/potato.dat
 git commit -m "Added potato"
 
+echo ""
 echo "Showing project"
 git status
 git log
